@@ -1,4 +1,4 @@
-
+// import { browser,element,by } from "protractor"
 
 
 const { browser, element ,by} = require("protractor")
@@ -56,19 +56,19 @@ describe("login test ",()=>{
     // })
     
 
-    //  it("add pharmacy",()=>{
-    //     // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacyName')).sendKeys('Tinua');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phoneNumber')).sendKeys('8344546465');
-    //     element(by.name('physicalAddress')).sendKeys('Tinua@gmailcom');
-    //     element(by.name('description')).click();
-    //     element(by.buttonText('Save changes')).click();
-    //     browser.sleep(10000)
+     it("add pharmacy",()=>{
+        // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('Tinua');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('8344546465');
+        element(by.name('physical_address')).sendKeys('Tinuamailcom');
+        element(by.name('description_value')).sendKeys('Tinua@gmailcom');
+        element(by.buttonText('Save changes')).click();
+        browser.sleep(10000)
         
-    // })
+    })
     
 
 
@@ -98,21 +98,20 @@ it("add store",()=>{
     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
     element(by.cssContainingText('a', 'Stores')).click();
     element(by.buttonText('Store')).click();
-    browser.sleep(10000)
+    
     element(by.name('storeName')).sendKeys('Tinua');
     element(by.id('outlined-select-currency')).click();
     element(by.cssContainingText('ul li','UAE')).click()
     element(by.name('phoneNumber')).sendKeys('8344546465');
     element(by.name('address')).sendKeys('Tefeffdfd');
-    // element(by.name('description')).sendKeys('Tinua@gmailfdfdfom');
+    element(by.name('description_value')).sendKeys('Tinua@gmailfdfdfom');
+    // element(by.id('mui-29')).sendKeys('Tinua@gmailfdfdfom');
     element(by.name('drugs')).sendKeys('ifdfdfsfdfcom');
-
-
-    browser.sleep(10000)
+    
         element(by.buttonText('Save changes')).click();
-        browser.sleep(10000)
+        
 
-    browser.sleep(10000)
+   
 
 })
 
