@@ -56,19 +56,21 @@ describe("login test ",()=>{
     // })
     
 
-     it("add pharmacy",()=>{
-        // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
-        element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('Tinua');
-        element(by.id('outlined-select-currency')).click();
-        element(by.cssContainingText('ul li','UAE')).click()
-        element(by.name('phone_number')).sendKeys('8344546465');
-        element(by.name('physical_address')).sendKeys('Tinuamailcom');
-        element(by.name('description_value')).sendKeys('Tinua@gmailcom');
-        element(by.buttonText('Save changes')).click();
-        browser.sleep(10000)
+    //  it("add pharmacy",()=>{
+
+    //     // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
+
+    //     element(by.buttonText('Pharmacy')).click();
+    //     element(by.name('pharmacy_name')).sendKeys('Tinua');
+    //     element(by.id('outlined-select-currency')).click();
+    //     element(by.cssContainingText('ul li','UAE')).click()
+    //     element(by.name('phone_number')).sendKeys('8344546465');
+    //     element(by.name('physical_address')).sendKeys('Tinuamailcom');
+    //     element(by.name('description_value')).sendKeys('Tinua@gmailcom');
+    //     element(by.buttonText('Save changes')).click();
+    //     browser.sleep(10000)
         
-    })
+    // })
     
 
 
@@ -93,28 +95,54 @@ describe("login test ",()=>{
 
 // })
 
-it("add store",()=>{
+// it("add store",()=>{
  
-    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
-    element(by.cssContainingText('a', 'Stores')).click();
-    element(by.buttonText('Store')).click();
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Stores')).click();
+//     element(by.buttonText('Store')).click();
     
-    element(by.name('storeName')).sendKeys('Tinua');
-    element(by.id('outlined-select-currency')).click();
-    element(by.cssContainingText('ul li','UAE')).click()
-    element(by.name('phoneNumber')).sendKeys('8344546465');
-    element(by.name('address')).sendKeys('Tefeffdfd');
-    element(by.name('description_value')).sendKeys('Tinua@gmailfdfdfom');
-    // element(by.id('mui-29')).sendKeys('Tinua@gmailfdfdfom');
-    element(by.name('drugs')).sendKeys('ifdfdfsfdfcom');
-    
-        element(by.buttonText('Save changes')).click();
+//     element(by.name('storeName')).sendKeys('Tinua');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('phoneNumber')).sendKeys('8344546465');
+//     element(by.name('address')).sendKeys('Tefeffdfd');
+//     element(by.name('description_value')).sendKeys('Tinua@gmailfdfdfom');
+
+//     // element(by.id('mui-29')).sendKeys('Tinua@gmailfdfdfom');
+
+//     element(by.name('drugs')).sendKeys('ifdfdfsfdfcom');
+
+//     element(by.buttonText('Save changes')).click();
         
 
    
 
+// })
+// it("Edit store",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Stores')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('storeName')).clear().sendKeys('Tinu123a');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','Somalia')).click()
+//     element(by.name('phoneNumber')).clear().sendKeys('9633807976');
+//     element(by.name('address')).clear().sendKeys('address');
+//     element(by.name('description_value')).clear().sendKeys('description');
+//     element(by.name('drugs')).clear().sendKeys('drugcalpol');
+//     browser.sleep(10000)
+//     element(by.buttonText('Update changes')).click();
+// })
+
+
+it("Delete store",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Stores')).click();
+    element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    element.all(by.cssContainingText('ul li p','Delete')).last().click();
+    element(by.buttonText('Delete')).click();
 })
 
-    
+
 })
    
