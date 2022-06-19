@@ -56,21 +56,32 @@ describe("login test ",()=>{
     // })
     
 
-    //  it("add pharmacy",()=>{
+     it("add pharmacy",async (e)=>{
 
-    //     // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
+        // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
+        try{
+        await element(by.buttonText('Pharmacy')).click();
+        await element(by.name('pharmacy_name')).sendKeys('Tinufyy');
+        await element(by.id('outlined-select-currency')).click();
+        await element(by.cssContainingText('ul li','UAE')).click()
+        await element(by.name('phone_number')).sendKeys('8344546465');
+        await element(by.name('physical_address')).sendKeys('Tinuamailcom');
+        await element(by.name('description_value')).sendKeys('Tinua@gmailcom');
+        await element(by.buttonText('Save changes')).click();
+        // expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
+        //     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
+      
+        await expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false)
 
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('Tinua');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('8344546465');
-    //     element(by.name('physical_address')).sendKeys('Tinuamailcom');
-    //     element(by.name('description_value')).sendKeys('Tinua@gmailcom');
-    //     element(by.buttonText('Save changes')).click();
-    //     browser.sleep(10000)
+       } catch {
+           e.fail('Pharmacy name already exist')
+       }
+    
+        // browser.sleep(10000)
+
         
-    // })
+    })
     
 
 
@@ -101,7 +112,7 @@ describe("login test ",()=>{
 //     element(by.cssContainingText('a', 'Stores')).click();
 //     element(by.buttonText('Store')).click();
     
-//     element(by.name('storeName')).sendKeys('Tinua');
+//     element(by.name('storeName')).sendKeys('Tinua123');
 //     element(by.id('outlined-select-currency')).click();
 //     element(by.cssContainingText('ul li','UAE')).click()
 //     element(by.name('phoneNumber')).sendKeys('8344546465');
@@ -135,13 +146,13 @@ describe("login test ",()=>{
 // })
 
 
-it("Delete store",()=>{
-    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
-    element(by.cssContainingText('a', 'Stores')).click();
-    element.all(by.cssContainingText('table tr td svg','')).get(0).click();
-    element.all(by.cssContainingText('ul li p','Delete')).last().click();
-    element(by.buttonText('Delete')).click();
-})
+// it("Delete store",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Stores')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+//     element.all(by.cssContainingText('ul li p','Delete')).last().click();
+//     element(by.buttonText('Delete')).click();
+// })
 
 
 })
