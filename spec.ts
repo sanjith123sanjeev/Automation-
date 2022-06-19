@@ -56,31 +56,29 @@ describe("login test ",()=>{
     // })
     
 
-     it("add pharmacy",async (e)=>{
+     it("add pharmacy",()=>{
 
         // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
-        try{
-        await element(by.buttonText('Pharmacy')).click();
-        await element(by.name('pharmacy_name')).sendKeys('Tinufyy');
-        await element(by.id('outlined-select-currency')).click();
-        await element(by.cssContainingText('ul li','UAE')).click()
-        await element(by.name('phone_number')).sendKeys('8344546465');
-        await element(by.name('physical_address')).sendKeys('Tinuamailcom');
-        await element(by.name('description_value')).sendKeys('Tinua@gmailcom');
-        await element(by.buttonText('Save changes')).click();
+
+
+    try{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('Tinufyy');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('8344546465');
+        element(by.name('physical_address')).sendKeys('Tinuamailcom');
+        element(by.name('description_value')).sendKeys('Tinua@gmailcom');
+        element(by.buttonText('Save changes')).click();
         // expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
         //     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
     //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
-      
-        await expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false)
-
-       } catch {
-           e.fail('Pharmacy name already exist')
-       }
-    
-        // browser.sleep(10000)
-
-        
+       
+      let nameExt = expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
+       
+    }catch{
+    } 
+       browser.sleep(10000)
     })
     
 
