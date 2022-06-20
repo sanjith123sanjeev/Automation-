@@ -59,28 +59,38 @@ describe("login test ",()=>{
      it("add pharmacy",()=>{
 
         // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
-
-
-    try{
         element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('Tinufyy');
+        element(by.name('pharmacy_name')).sendKeys('Tinufy2fdgdgfdggdgdfy');
         element(by.id('outlined-select-currency')).click();
         element(by.cssContainingText('ul li','UAE')).click()
-        element(by.name('phone_number')).sendKeys('8344546465');
+        element(by.name('phone_number')).sendKeys('8344578765');
         element(by.name('physical_address')).sendKeys('Tinuamailcom');
-        element(by.name('description_value')).sendKeys('Tinua@gmailcom');
+        element(by.name('description_value')).sendKeys('Tgdgfgin');
         element(by.buttonText('Save changes')).click();
         // expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
         //     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
     //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
        
-      let nameExt = expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
+       expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
+       expect(element(by.cssContainingText('p','"Pharmacy Name" length must be less than or equal to 30 characters long')).isPresent()).toBe('"Pharmacy Name" length must be less than or equal to 30 characters long')
+       expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe('"Pharmacy Name" length must be at least 3 characters long')
+       expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe('pharmacy_name is a required field')
        
-    }catch{
-    } 
+       expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
+       
+       expect(element(by.cssContainingText('p','Phone number is not valid')).isPresent()).toBe(false,'Phone number is not valid')
+       expect(element(by.cssContainingText('p','"Phone Number" length must be 10 characters long')).isPresent()).toBe(false,'"Phone Number" length must be 10 characters long')
+       expect(element(by.cssContainingText('p','phone_number is a required field')).isPresent()).toBe('phone_number is a required field')
+       
+       expect(element(by.cssContainingText('p','physical_address must be at least 6 characters')).isPresent()).toBe(false,'physical_address must be at least 6 characters')
+       expect(element(by.cssContainingText('p','physical_address must be at most 50 characters')).isPresent()).toBe(false,'physical_address must be at most 50 characters')
+       expect(element(by.cssContainingText('p','physical_address is a required field')).isPresent()).toBe('physical_address is a required field')
+       
+       expect(element(by.cssContainingText('p','description_value must be at least 5 characters')).isPresent()).toBe(false,'description_value must be at least 5 characters')
+       expect(element(by.cssContainingText('p','description_value must be at most 150 characters')).isPresent()).toBe(false,'description_value must be at most 150 characters')
+       expect(element(by.cssContainingText('p','description_value is a required field')).isPresent()).toBe('description_value is a required field')
        browser.sleep(10000)
-    })
-    
+     })
 
 
 
