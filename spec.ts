@@ -60,37 +60,66 @@ describe("login test ",()=>{
 
         // element(by.css('.icon.icon-tabler.icon-tabler-menu-2',)).click();
         element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('Tinufy2fdgdgfdggdgdfy');
+        element(by.name('pharmacy_name')).sendKeys('assddfsdfd');
         element(by.id('outlined-select-currency')).click();
         element(by.cssContainingText('ul li','UAE')).click()
-        element(by.name('phone_number')).sendKeys('8344578765');
-        element(by.name('physical_address')).sendKeys('Tinuamailcom');
-        element(by.name('description_value')).sendKeys('Tgdgfgin');
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
         element(by.buttonText('Save changes')).click();
-        // expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
-        //     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+
+    //     expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
+    //         element.all(by.cssContainingText('table tr td svg','')).get(0).click();
     //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
        
-       expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
-       expect(element(by.cssContainingText('p','"Pharmacy Name" length must be less than or equal to 30 characters long')).isPresent()).toBe('"Pharmacy Name" length must be less than or equal to 30 characters long')
-       expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe('"Pharmacy Name" length must be at least 3 characters long')
-       expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe('pharmacy_name is a required field')
+    //    expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
+    //    expect(element(by.cssContainingText('p','pharmacy_name must be at most 50 characters')).isPresent()).toBe(false,'pharmacy_name must be at most 50 characters')
+    //    expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe(false,'"Pharmacy Name" length must be at least 3 characters long')
+    //    expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe(false,'pharmacy_name is a required field')
        
-       expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
+    //    expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
        
-       expect(element(by.cssContainingText('p','Phone number is not valid')).isPresent()).toBe(false,'Phone number is not valid')
-       expect(element(by.cssContainingText('p','"Phone Number" length must be 10 characters long')).isPresent()).toBe(false,'"Phone Number" length must be 10 characters long')
-       expect(element(by.cssContainingText('p','phone_number is a required field')).isPresent()).toBe('phone_number is a required field')
+    //    expect(element(by.cssContainingText('p','Phone number is not valid')).isPresent()).toBe(false,'Phone number is not valid')
+    //    expect(element(by.cssContainingText('p','"Phone Number" length must be 10 characters long')).isPresent()).toBe(false,'"Phone Number" length must be 10 characters long')
+    //    expect(element(by.cssContainingText('p','phone_number is a required field')).isPresent()).toBe(false,'phone_number is a required field')
        
-       expect(element(by.cssContainingText('p','physical_address must be at least 6 characters')).isPresent()).toBe(false,'physical_address must be at least 6 characters')
-       expect(element(by.cssContainingText('p','physical_address must be at most 50 characters')).isPresent()).toBe(false,'physical_address must be at most 50 characters')
-       expect(element(by.cssContainingText('p','physical_address is a required field')).isPresent()).toBe('physical_address is a required field')
+    //    expect(element(by.cssContainingText('p','physical_address must be at least 6 characters')).isPresent()).toBe(false,'physical_address must be at least 6 characters')
+    //    expect(element(by.cssContainingText('p','physical_address must be at most 50 characters')).isPresent()).toBe(false,'physical_address must be at most 50 characters')
+    //    expect(element(by.cssContainingText('p','physical_address is a required field')).isPresent()).toBe(false,'physical_address is a required field')
        
-       expect(element(by.cssContainingText('p','description_value must be at least 5 characters')).isPresent()).toBe(false,'description_value must be at least 5 characters')
-       expect(element(by.cssContainingText('p','description_value must be at most 150 characters')).isPresent()).toBe(false,'description_value must be at most 150 characters')
-       expect(element(by.cssContainingText('p','description_value is a required field')).isPresent()).toBe('description_value is a required field')
-       browser.sleep(10000)
+    //    expect(element(by.cssContainingText('p','description_value must be at least 5 characters')).isPresent()).toBe(false,'description_value must be at least 5 characters')
+    //    expect(element(by.cssContainingText('p','description_value must be at most 150 characters')).isPresent()).toBe(false,'description_value must be at most 150 characters')
+    //    expect(element(by.cssContainingText('p','description_value is a required field')).isPresent()).toBe(false,'description_value is a required field')
+    //    browser.sleep(10000)
      })
+
+
+    //  it("Edit pharmacy",()=>{
+        
+    //         element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    //         element.all(by.cssContainingText('ul li p','Edit')).last().click();
+    //         element(by.name('pharmacy_name')).clear().sendKeys('TiddgdfyTiddgdfyTiddgdfyTiddgdfyTiddgdfyTiddgdfyTiddgdfy');
+    //         element(by.id('outlined-select-currency')).click();
+    //         element(by.cssContainingText('ul li','UAE')).click()
+    //         element(by.name('phone_number')).clear().sendKeys('8344578765');
+    //         element(by.name('physical_address')).clear().sendKeys('Tinuasmailcom');
+    //         element(by.name('description_value')).clear().sendKeys('Tgdgfxgin');
+    //         // browser.sleep(10000)
+    //         element(by.buttonText('Update changes')).click();
+    //         browser.sleep(10000)
+
+    //         // expect(element(by.cssContainingText('p','"Pharmacy Name" length must be less than or equal to 30 characters long')).isPresent()).toBe('"Pharmacy Name" length must be less than or equal to 30 characters long')
+    //         // expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe('"Pharmacy Name" length must be at least 3 characters long')
+    //         // expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe('pharmacy_name is a required field')
+  
+    //     })
+
+    it("Delete pharmacy",()=>{
+           
+            element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+            element.all(by.cssContainingText('ul li p','Delete')).last().click();
+            element(by.buttonText('Delete')).click();
+        })
 
 
 
