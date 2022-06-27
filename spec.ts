@@ -1,7 +1,7 @@
 // import { browser,element,by } from "protractor"
 
 
-const { browser, element ,by} = require("protractor")
+//const { browser, element ,by} = require("protractor")
 describe("login test ",()=>{
      
 
@@ -59,7 +59,7 @@ describe("login test ",()=>{
      it("add pharmacy success",()=>{
 
         element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('A178ret Pharmacy');
+        element(by.name('pharmacy_name')).sendKeys('A13Pharmacy');
         element(by.id('outlined-select-currency')).click();
         element(by.cssContainingText('ul li','UAE')).click()
         element(by.name('phone_number')).sendKeys('3456789087');
@@ -70,193 +70,193 @@ describe("login test ",()=>{
     })
 
 
-    // it("add pharmacy error message 1 'Pharmacy name already exist'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 Pharmacy');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //      //     expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
-    // //         element.all(by.cssContainingText('table tr td svg','')).get(0).click();
-    // //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
+    it("add pharmacy error message 1 'Pharmacy name already exist'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 Pharmacy');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+         //     expect(element(by.tagName('p')).getText()).toBe('Pharmacy name already exist')
+    //         element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    //    expect(element.all(by.cssContainingText('MuiTypography-root.MuiTypography-body1.css-11081i3-MuiTypography-root p','Pharmacy name already exist')).isPresent()).toBe(false);
        
-    //     expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
-    //     browser.sleep(1000)
-    // })
+        expect(element(by.cssContainingText('p','Pharmacy name already exist')).isPresent()).toBe(false,'Pharmacy name already exist')
+        browser.sleep(1000)
+    })
 
 
-    // it("Add pharmacy error message 2 'pharmacy_name must be at most 50 characters'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 Pharmacy');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','pharmacy_name must be at most 50 characters')).isPresent()).toBe(false,'pharmacy_name must be at most 50 characters')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 2 'pharmacy_name must be at most 50 characters'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 Pharmacy');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','pharmacy_name must be at most 50 characters')).isPresent()).toBe(false,'pharmacy_name must be at most 50 characters')
+        browser.sleep(1000)
+    })
 
    
-    // it("Add pharmacy error message 3 'Pharmacy Name length must be at least 3 characters long",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A1');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe(false,'"Pharmacy Name" length must be at least 3 characters long')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 3 'Pharmacy Name length must be at least 3 characters long",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A1');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','"Pharmacy Name" length must be at least 3 characters long')).isPresent()).toBe(false,'"Pharmacy Name" length must be at least 3 characters long')
+        browser.sleep(1000)
+    })
     
-    // it("Add pharmacy error message 4 'pharmacy_name is a required field'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe(false,'pharmacy_name is a required field')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 4 'pharmacy_name is a required field'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','pharmacy_name is a required field')).isPresent()).toBe(false,'pharmacy_name is a required field')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 5 'Please select country code.'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 5 'Please select country code.'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 6 'Phone number is not valid'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyAA');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('34agg89087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','Phone number is not valid')).isPresent()).toBe(false,'Phone number is not valid')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 6 'Phone number is not valid'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyAA');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('34agg89087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','Phone number is not valid')).isPresent()).toBe(false,'Phone number is not valid')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 7 'Phone Number length must be 10 characters long'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA17');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3486767677677677');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','"Phone Number" length must be 10 characters long')).isPresent()).toBe(false,'"Phone Number" length must be 10 characters long')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 7 'Phone Number length must be 10 characters long'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA17');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3486767677677677');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','"Phone Number" length must be 10 characters long')).isPresent()).toBe(false,'"Phone Number" length must be 10 characters long')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 8 'phone_number is a required field'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','phone_number is a required field')).isPresent()).toBe(false,'phone_number is a required field')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 8 'phone_number is a required field'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','phone_number is a required field')).isPresent()).toBe(false,'phone_number is a required field')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 9 'physical_address must be at least 6 characters'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinT');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','physical_address must be at least 6 characters')).isPresent()).toBe(false,'physical_address must be at least 6 characters')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 9 'physical_address must be at least 6 characters'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinT');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','physical_address must be at least 6 characters')).isPresent()).toBe(false,'physical_address must be at least 6 characters')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 10 'physical_address must be at most 50 characters'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA17');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','physical_address must be at most 50 characters')).isPresent()).toBe(false,'physical_address must be at most 50 characters')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 10 'physical_address must be at most 50 characters'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA17');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnuaTinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','physical_address must be at most 50 characters')).isPresent()).toBe(false,'physical_address must be at most 50 characters')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 11 'physical_address is a required field'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 Pharmacy');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('');
-    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','physical_address is a required field')).isPresent()).toBe(false,'physical_address is a required field')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 11 'physical_address is a required field'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 Pharmacy');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('');
+        element(by.name('description_value')).sendKeys('Tgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','physical_address is a required field')).isPresent()).toBe(false,'physical_address is a required field')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 12 'description_value must be at least 5 characters'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('Tgd');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','description_value must be at least 5 characters')).isPresent()).toBe(false,'description_value must be at least 5 characters')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 12 'description_value must be at least 5 characters'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('Tgd');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','description_value must be at least 5 characters')).isPresent()).toBe(false,'description_value must be at least 5 characters')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 13 'description_value must be at most 150 characters'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('TgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxgin');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','description_value must be at most 150 characters')).isPresent()).toBe(false,'description_value must be at most 150 characters')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 13 'description_value must be at most 150 characters'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('TgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxginTgdgfxgin');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','description_value must be at most 150 characters')).isPresent()).toBe(false,'description_value must be at most 150 characters')
+        browser.sleep(1000)
+    })
 
-    // it("Add pharmacy error message 14 'description_value is a required field'",()=>{
-    //     element(by.buttonText('Pharmacy')).click();
-    //     element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA1A');
-    //     element(by.id('outlined-select-currency')).click();
-    //     element(by.cssContainingText('ul li','UAE')).click()
-    //     element(by.name('phone_number')).sendKeys('3456789087');
-    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
-    //     element(by.name('description_value')).sendKeys('');
-    //     element(by.buttonText('Save changes')).click();
-    //     expect(element(by.cssContainingText('p','description_value is a required field')).isPresent()).toBe(false,'description_value is a required field')
-    //     browser.sleep(1000)
-    // })
+    it("Add pharmacy error message 14 'description_value is a required field'",()=>{
+        element(by.buttonText('Pharmacy')).click();
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA1A');
+        element(by.id('outlined-select-currency')).click();
+        element(by.cssContainingText('ul li','UAE')).click()
+        element(by.name('phone_number')).sendKeys('3456789087');
+        element(by.name('physical_address')).sendKeys('TinTinTinnua');
+        element(by.name('description_value')).sendKeys('');
+        element(by.buttonText('Save changes')).click();
+        expect(element(by.cssContainingText('p','description_value is a required field')).isPresent()).toBe(false,'description_value is a required field')
+        browser.sleep(1000)
+    })
    
         
        
@@ -439,16 +439,37 @@ describe("login test ",()=>{
 
 
 
-    it("Delete pharmacy",()=>{
+    it("Delete pharmacy success",()=>{
            
             element.all(by.cssContainingText('table tr td svg','')).get(0).click();
             element.all(by.cssContainingText('ul li p','Delete')).last().click();
             element(by.buttonText('Delete')).click();
+            browser.sleep(1000)
+        })
+    
+    it("Delete pharmacy cancel",()=>{
+           
+            element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+            element.all(by.cssContainingText('ul li p','Delete')).last().click();
+            element(by.buttonText('Cancel')).click();
+            browser.sleep(1000)
+        })  
+
+     it("search pharmacy",()=>{
+           
+            element(by.id('input-search-list-style1')).click().sendKeys('AToday');
+            browser.sleep(10000)
+        })
+
+     it("search pharmacy textbox clear",()=>{
+           
+            element(by.id('input-search-list-style1')).click().sendKeys('AToday').clear();
+            browser.sleep(10000)
         })
 
 
 
-// it("table click",()=>{
+// it("Add user",()=>{
  
 //     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
 //     element(by.cssContainingText('a', 'Users')).click();
@@ -468,53 +489,53 @@ describe("login test ",()=>{
 
 // })
 
-// it("add store",()=>{
+it("add store",()=>{
  
-//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
-//     element(by.cssContainingText('a', 'Stores')).click();
-//     element(by.buttonText('Store')).click();
-    
-//     element(by.name('storeName')).sendKeys('Tinua123');
-//     element(by.id('outlined-select-currency')).click();
-//     element(by.cssContainingText('ul li','UAE')).click()
-//     element(by.name('phoneNumber')).sendKeys('8344546465');
-//     element(by.name('address')).sendKeys('Tefeffdfd');
-//     element(by.name('description_value')).sendKeys('Tinua@gmailfdfdfom');
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Stores')).click();
+    element(by.buttonText('Store')).click();
+    //browser.sleep(10000)
+    element(by.name('storeName')).sendKeys('Tinua1sdf23');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('phoneNumber')).sendKeys('8344546465');
+    element(by.name('address')).sendKeys('Tefeffdfd');
+    element(by.name('description_value')).sendKeys('Tinuaailfdfdfom');
 
-//     // element(by.id('mui-29')).sendKeys('Tinua@gmailfdfdfom');
+    // element(by.id('mui-29')).sendKeys('Tinua@gmailfdfdfom');
 
-//     element(by.name('drugs')).sendKeys('ifdfdfsfdfcom');
+    element(by.name('drugs')).sendKeys('ifdfdfsfdfcom');
 
-//     element(by.buttonText('Save changes')).click();
+    element(by.buttonText('Save changes')).click();
         
 
    
 
-// })
-// it("Edit store",()=>{
-//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
-//     element(by.cssContainingText('a', 'Stores')).click();
-//     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
-//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
-//     element(by.name('storeName')).clear().sendKeys('Tinu123a');
-//     element(by.id('outlined-select-currency')).click();
-//     element(by.cssContainingText('ul li','Somalia')).click()
-//     element(by.name('phoneNumber')).clear().sendKeys('9633807976');
-//     element(by.name('address')).clear().sendKeys('address');
-//     element(by.name('description_value')).clear().sendKeys('description');
-//     element(by.name('drugs')).clear().sendKeys('drugcalpol');
-//     browser.sleep(10000)
-//     element(by.buttonText('Update changes')).click();
-// })
+})
+it("Edit store",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Stores')).click();
+    element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    element.all(by.cssContainingText('ul li p','Edit')).last().click();
+    element(by.name('storeName')).clear().sendKeys('Tinu123a');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','Somalia')).click()
+    element(by.name('phoneNumber')).clear().sendKeys('9633807976');
+    element(by.name('address')).clear().sendKeys('address');
+    element(by.name('description_value')).clear().sendKeys('description');
+    element(by.name('drugs')).clear().sendKeys('drugcalpol');
+    browser.sleep(10000)
+    element(by.buttonText('Update changes')).click();
+})
 
 
-// it("Delete store",()=>{
-//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
-//     element(by.cssContainingText('a', 'Stores')).click();
-//     element.all(by.cssContainingText('table tr td svg','')).get(0).click();
-//     element.all(by.cssContainingText('ul li p','Delete')).last().click();
-//     element(by.buttonText('Delete')).click();
-// })
+it("Delete store",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Stores')).click();
+    element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+    element.all(by.cssContainingText('ul li p','Delete')).last().click();
+    element(by.buttonText('Delete')).click();
+})
 
 
 })
