@@ -8,18 +8,12 @@ exports.config = {
       browserName: 'firefox'
     },
 
-    // plugins : [
-    //   {
-    //     package : "protractor-react-selector"
-
-    //   }
-    // ],
     onPrepare: async () => {
       await browser.waitForAngularEnabled(false);
-      //you can do magic here. See the Pro-tip in later section
+      
      },
   
-    // Framework to use. Jasmine is recommended.
+    // Framework to use. Jasmine 
     framework: 'jasmine',
     specs:['./spec.ts'],
   
