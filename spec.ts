@@ -208,7 +208,7 @@ describe("login test ",()=>{
 
     it("Add pharmacy error message 11 'physical_address is a required field'",()=>{
         element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('A178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 PharmacyA178 Pharmacy');
+        element(by.name('pharmacy_name')).sendKeys('A178 PharmacPharmacy');
         element(by.id('outlined-select-currency')).click();
         element(by.cssContainingText('ul li','UAE')).click()
         element(by.name('phone_number')).sendKeys('3456789087');
@@ -267,7 +267,6 @@ describe("login test ",()=>{
         
             element.all(by.cssContainingText('table tr td svg','')).get(1).click();
             element.all(by.cssContainingText('ul li p','Edit')).last().click();
-            browser.sleep(10000)
             element(by.name('pharmacy_name')).clear().sendKeys('Tidddgdfy');
             element(by.id('outlined-select-currency')).click();
             element(by.cssContainingText('ul li','UAE')).click()
@@ -441,7 +440,7 @@ describe("login test ",()=>{
 
     it("Delete pharmacy success",()=>{
            
-            element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+            element.all(by.cssContainingText('table tr td svg','')).get(1).click();
             element.all(by.cssContainingText('ul li p','Delete')).last().click();
             element(by.buttonText('Delete')).click();
             browser.sleep(1000)
@@ -449,7 +448,7 @@ describe("login test ",()=>{
     
     it("Delete pharmacy cancel",()=>{
            
-            element.all(by.cssContainingText('table tr td svg','')).get(0).click();
+            element.all(by.cssContainingText('table tr td svg','')).get(1).click();
             element.all(by.cssContainingText('ul li p','Delete')).last().click();
             element(by.buttonText('Cancel')).click();
             browser.sleep(1000)
