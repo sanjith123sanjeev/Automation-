@@ -480,7 +480,6 @@ it("Add user",()=>{
     element(by.name('mobileNumber')).sendKeys('8344546465');
         element(by.buttonText('Save changes')).click();
 
-    browser.sleep(10000)
 
 })
 
