@@ -56,18 +56,18 @@ describe("login test ",()=>{
     // })
     
 
-     it("add pharmacy success",()=>{
+    //  it("add pharmacy success",()=>{
 
-        element(by.buttonText('Pharmacy')).click();
-        element(by.name('pharmacy_name')).sendKeys('A13Pharmacy');
-        element(by.id('outlined-select-currency')).click();
-        element(by.cssContainingText('ul li','UAE')).click()
-        element(by.name('phone_number')).sendKeys('3456789087');
-        element(by.name('physical_address')).sendKeys('TinTinTinnua');
-        element(by.name('description_value')).sendKeys('Tgdgfxgin');
-        element(by.buttonText('Save changes')).click();
-        browser.sleep(10000)
-    })
+    //     element(by.buttonText('Pharmacy')).click();
+    //     element(by.name('pharmacy_name')).sendKeys('A13Pharmacy');
+    //     element(by.id('outlined-select-currency')).click();
+    //     element(by.cssContainingText('ul li','UAE')).click()
+    //     element(by.name('phone_number')).sendKeys('3456789087');
+    //     element(by.name('physical_address')).sendKeys('TinTinTinnua');
+    //     element(by.name('description_value')).sendKeys('Tgdgfxgin');
+    //     element(by.buttonText('Save changes')).click();
+    //     browser.sleep(10000)
+    // })
 
 
     // it("add pharmacy error message 1 'Pharmacy name already exist'",()=>{
@@ -468,7 +468,7 @@ describe("login test ",()=>{
 
 
 
-it("Add user",()=>{
+it("Add user success",()=>{
  
     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
     element(by.cssContainingText('a', 'Users')).click();
@@ -478,12 +478,281 @@ it("Add user",()=>{
     element(by.id('outlined-select-currency')).click();
     element(by.cssContainingText('ul li','UAE')).click()
     element(by.name('mobileNumber')).sendKeys('8344546465');
-        element(by.buttonText('Save changes')).click();
-
-        
+    element(by.buttonText('Save changes')).click();  
     browser.sleep(10000)
 
 })
+
+it("Add user Error message 1:first name is required",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('');
+    element(by.name('email')).sendKeys('Tinua@gmail.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','first name is required')).isPresent()).toBe(false,'first name is required')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 2:Name length must be at least 3 characters long",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('fd');
+    element(by.name('email')).sendKeys('Tinua@gmail.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','"Name" length must be at least 3 characters long')).isPresent()).toBe(false,'"Name" length must be at least 3 characters long')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 3:Name length must be less than or equal to 20 characters long",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju storeSanju storeSanju storeSanju storeSanju store');
+    element(by.name('email')).sendKeys('Tinua@gmail.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','"Name" length must be less than or equal to 20 characters long')).isPresent()).toBe(false,'"Name" length must be less than or equal to 20 characters long')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 4:Email is required",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','Email is required')).isPresent()).toBe(false,'Email is required')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 5:Enter a valid email",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('sfafasf');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','Enter a valid email')).isPresent()).toBe(false,'Enter a valid email')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 6:Please select country code.",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('sfafasf');
+    // element(by.id('outlined-select-currency')).click();
+    // element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8344546465');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','Please select country code.')).isPresent()).toBe(false,'Please select country code.')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 7:Mobile is required",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('Sanju@zeefasys.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','Mobile is required')).isPresent()).toBe(false,'Mobile is required')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 8:numbers are allowed",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('Sanju@zeefasys.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('fgf');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','numbers are allowed')).isPresent()).toBe(false,'numbers are allowed')
+    browser.sleep(1000)
+
+})
+it("Add user Error message 9:10 digits required",()=>{
+    element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    element(by.cssContainingText('a', 'Users')).click();
+    element(by.buttonText('User')).click();
+    element(by.name('name')).sendKeys('Sanju store');
+    element(by.name('email')).sendKeys('Sanju@zeefasys.com');
+    element(by.id('outlined-select-currency')).click();
+    element(by.cssContainingText('ul li','UAE')).click()
+    element(by.name('mobileNumber')).sendKeys('8987898');
+    element(by.buttonText('Save changes')).click();  
+    expect(element(by.cssContainingText('p','10 digits required')).isPresent()).toBe(false,'10 digits required')
+    browser.sleep(1000)
+
+})
+// it("Edit user",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('SANJUSSTORE');
+//     element(by.name('email')).clear().sendKeys('Sanju@gmail.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('9988998899');
+//         element(by.buttonText('Update changes')).click();
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 1:Name length must be at least 3 characters long: ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('SA');
+//     element(by.name('email')).clear().sendKeys('Sanju@gmail.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('9988998899');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','"Name" length must be at least 3 characters long')).isPresent()).toBe(false,'"Name" length must be at least 3 characters long')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 2:Name length must be less than or equal to 20 characters long: ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('SANJUSTORESANJUSTORESANJUSTORESANJUSTORESANJUSTORESANJUSTORE');
+//     element(by.name('email')).clear().sendKeys('Sanju@gmail.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('9988998899');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','"Name" length must be less than or equal to 20 characters long:')).isPresent()).toBe(false,'"Name" length must be less than or equal to 20 characters long:')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 3:first name is required ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('');
+//     element(by.name('email')).clear().sendKeys('Sanju@gmail.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('9988998899');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','first name is required')).isPresent()).toBe(false,'first name is required')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 4:Email is required ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('Sanju Store');
+//     element(by.name('email')).clear().sendKeys('');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('9988998899');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','Email is required')).isPresent()).toBe(false,'Email is required')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 5:Mobile is required ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('Sanju Store');
+//     element(by.name('email')).clear().sendKeys('sanjju@zeefasy.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','Mobile is required')).isPresent()).toBe(false,'Mobile is required')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 6:numbers are allowed ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('Sanju Store');
+//     element(by.name('email')).clear().sendKeys('sanjju@zeefasy.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('ytrty');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','numbers are allowed')).isPresent()).toBe(false,'numbers are allowed')
+//     browser.sleep(1000)
+// })
+// it("Edit user Error message 7:10 digits required ",()=>{
+//     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+//     element(by.cssContainingText('a', 'Users')).click();
+//     element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+//     element.all(by.cssContainingText('ul li p','Edit')).last().click();
+//     element(by.name('name')).clear().sendKeys('Sanju Store');
+//     element(by.name('email')).clear().sendKeys('sanjju@zeefasy.com');
+//     element(by.id('outlined-select-currency')).click();
+//     element(by.cssContainingText('ul li','UAE')).click()
+//     element(by.name('mobileNumber')).clear().sendKeys('45786');
+//     element(by.buttonText('Update changes')).click();
+//     expect(element(by.cssContainingText('p','10 digits required')).isPresent()).toBe(false,'10 digits required')
+//     browser.sleep(1000)
+// })
+
+
+    // it("Delete User success",()=>{
+    //         element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+    //         element(by.cssContainingText('a', 'Users')).click();
+    //         element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+    //         element.all(by.cssContainingText('ul li p','Delete')).last().click();
+    //         element(by.buttonText('Delete')).click();
+    //         browser.sleep(1000)
+    //     })
+    
+    it("Delete User cancel",()=>{
+            element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+            element(by.cssContainingText('a', 'Users')).click();
+            element.all(by.cssContainingText('table tr td svg','')).get(1).click();
+            element.all(by.cssContainingText('ul li p','Delete')).last().click();
+            element(by.buttonText('Cancel')).click();
+            browser.sleep(10000)
+        })  
+
+     it("search User",()=>{
+        element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+        element(by.cssContainingText('a', 'Users')).click();
+            element(by.id('input-search-list-style1')).click().sendKeys('saniya');
+            browser.sleep(10000)
+        })
+
+     it("search user textbox clear",()=>{
+        element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
+        element(by.cssContainingText('a', 'Users')).click();
+            element(by.id('input-search-list-style1')).click().sendKeys('AToday').clear();
+            browser.sleep(10000)
+        })
 
 // it("add store success ",()=>{
  

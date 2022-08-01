@@ -1,50 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="3" time="33.436">
- <testsuite name="login test " timestamp="2022-07-08T12:52:10" hostname="localhost" time="33.436" errors="0" tests="3" skipped="0" disabled="0" failures="1">
-  <testcase classname="login test " name="launch applicaion" time="15.315" />
-  <testcase classname="login test " name="add pharmacy success" time="2.425">
-   <failure type="exception" message="Failed: No element found using locator: By(css selector, *[name=&quot;pharmacy_name&quot;])"><![CDATA[NoSuchElementError: No element found using locator: By(css selector, *[name="pharmacy_name"])
-    at /usr/local/lib/node_modules/protractor/built/element.js:814:27
-    at ManagedPromise.invokeCallback_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:1376:14)
-    at TaskQueue.execute_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2927:27
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:668:7
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)Error
-    at ElementArrayFinder.applyAction_ (/usr/local/lib/node_modules/protractor/built/element.js:459:27)
-    at ElementArrayFinder.<computed> [as sendKeys] (/usr/local/lib/node_modules/protractor/built/element.js:91:29)
-    at ElementFinder.<computed> [as sendKeys] (/usr/local/lib/node_modules/protractor/built/element.js:831:22)
-    at UserContext.<anonymous> (/home/lenovo/zeefasys/automation/Automation-/spec.ts:62:43)
-    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:112:25
-    at new ManagedPromise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:1077:7)
-    at ControlFlow.promise (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2505:12)
-    at schedulerExecute (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:95:18)
-    at TaskQueue.execute_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-From: Task: Run it("add pharmacy success") in control flow
-    at UserContext.<anonymous> (/usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:94:19)
-    at attempt (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
-    at QueueRunner.run (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
-    at runNext (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
-    at /usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
-    at /usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
-    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:64:48
-    at ControlFlow.emit (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/events.js:62:21)
-    at ControlFlow.shutdown_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2674:10)
-    at /usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2599:53
-From asynchronous test: 
-Error
-    at Suite.<anonymous> (/home/lenovo/zeefasys/automation/Automation-/spec.ts:59:6)
-    at addSpecsToSuite (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
-    at Env.describe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
-    at describe (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
-    at Object.<anonymous> (/home/lenovo/zeefasys/automation/Automation-/spec.ts:5:1)
-    at Module._compile (node:internal/modules/cjs/loader:1099:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
-    at Module.load (node:internal/modules/cjs/loader:975:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:822:12)]]>
-   </failure>
-  </testcase>
-  <testcase classname="login test " name="Add user" time="15.693" />
+<testsuites disabled="0" errors="0" failures="0" tests="4" time="61.088">
+ <testsuite name="login test " timestamp="2022-08-01T16:54:13" hostname="localhost" time="61.088" errors="0" tests="4" skipped="0" disabled="0" failures="0">
+  <testcase classname="login test " name="launch applicaion" time="20.805" />
+  <testcase classname="login test " name="Delete User cancel" time="13.898" />
+  <testcase classname="login test " name="search User" time="13.086" />
+  <testcase classname="login test " name="search user textbox clear" time="13.298" />
  </testsuite>
 </testsuites>
