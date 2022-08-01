@@ -609,6 +609,7 @@ it("Add user Error message 9:10 digits required",()=>{
     browser.sleep(1000)
 
 })
+
 // it("Edit user",()=>{
 //     element(by.cssContainingText('table tr td', 'A12pharmacy')).click();
 //     element(by.cssContainingText('a', 'Users')).click();
